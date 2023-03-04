@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --headings-font-color:#da0067;
+    --background-color:#e1f5ff;
+    --icon-color:#050038;
+    --button-color:#ec2761;
+    --nav-bg:#ffffff;
+
+}
+
+body{
+    color:black;
+    background-color:var(--background-color);
+    width: 100%;
+    scroll-behavior:smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------------------------------------------Header-------------------------------------- */
+
+
+
+
+
+header nav{
+    position: fixed;
+     top: 0;
+     width: 98%;
+    margin-left:1rem;
+    margin-right: 1rem; 
+    background-color:var(--nav-bg);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    /* filter: brightness(97%); */
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+}
+
+nav h1{
+    color: #da0067;
+    /* border: 1px solid black; */
+    margin-left: 5rem;
+    padding-top:.02rem;
+}
+nav ul{
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    margin-right: 5rem;
+
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    /* border: 1px solid black; */
+    border-radius:24px;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    transition: .7s;
+    transition: ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+nav ul li a:hover, a:active{
+    background-color:var(--button-color);
+    color: white;
+    padding-inline: .75rem;
+    letter-spacing:0.03cm;
+    transition: .7s;
+    transition: ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+
+
+/* ---------------------------------------------------------------Main------------------------------------------------ */
+
+/* ---------------------------------------------------Hero Section---------------------------------------------- */
+
+#hero_section{
+    /*  */
+    /* border: 1px solid red; */
+    height: 87.5vh;
+}
+#hero_section> div{
+    /* border: 1px solid red;  */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#nav_space{
+    height: 5rem;
+    /* border: 1px solid gold; */
+}
+.hero_text{
+    margin-top: 3rem;
+    font-size: larger;
+    font-weight: 700;
+}
+.hero_text p{
+    letter-spacing:.09dvw;
+    text-align: center;
+    color:rgb(91, 90, 90);
+}
+.buttons{
+    /* border: 1px solid green; */
+    display: flex;
+    gap:.7rem;
+}
+.buttons  button{
+    color: white;
+    font-weight: 600;
+    padding:1rem;
+    padding-inline:2rem;
+    margin-top: 5rem;
+    scroll-behavior: smooth;
+    border:none;
+    cursor: pointer;
+    /* border:1px solid white; */
+    border-radius: 24px;
+    background-color:var(--button-color);
+    font-size: large;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    transition: .5s;
+    transition: ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+
+}
+.buttons button:hover{
+    background-color: var(--nav-bg);
+    color:var(--button-color);
+    padding-inline-end:2.5rem;
+    /* letter-spacing:0.01cm; */
+    transition: .5s;
+    transition: ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    
+}
+#eclips{
+    /* border: 1px solid black; */
+    margin-top: 4rem;
+    color: #da0067;
+    background-color: var(--nav-bg);
+    height: 12rem;
+    text-align: center;
+    width: 17rem;
+    opacity:90%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+
+    animation: eclipsEnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+#eclips:hover{
+    opacity: 100%;
+}
+#eclips:nth-child(1){
+    padding-top: 1.7rem;
+    font-size:210%;
+}
+
+
+
+@keyframes eclipsEnimation {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 150px , 0);
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInAnimations_for_text {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 150px , 0);
+        cursor: pointer;
+        transition: 0.5s all ease-in-out;
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/*---------------------------------------------------- get_started_section----------------------------- */
+
+
+#get_started_section{
+    /* border: 1px solid black; */
+    /* background-color:#cbfcff; */
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    height:87.5vh;
+
+}
+.get_started_section_text{
+    padding-top: 2rem;
+}
+.get_started_section_text >div{
+    /* border: 1px solid red; */
+    background-color:var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    padding-bottom:.3rem;
+    font-size: larger;
+    font-weight: 500;
+    border-radius:12px;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,.2); */
+
+}
+.get_started_section_text div span{
+    color: rgb(91, 90, 90);
+    font-size: larger;
+    font-weight: 500;  
+}
+.get_started_section_text div span:nth-child(1){
+    color: var(--headings-font-color);
+    padding-top: .5rem;
+    font-size: xx-large;
+    font-weight:500;  
+}
+
+.get_started_section_text p{
+
+    padding-top:1.5rem;
+    letter-spacing:.09dvw;
+    font-size: large;
+    color: rgb(26, 24, 24);
+
+}
+#get_started_section  button{
+    margin-top: 1rem !important;
+
+}
+
+/* -------------------------------Quiz Intro Section---------------------- */
+
+#quiz_intro{
+    /* border: 1px solid brown; */
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:87.5vh;
+}
+#quiz_intro div{
+    padding-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#quiz_intro div p{
+    background-color: var(--background-color);
+}
+#quiz_intro h1{
+       /* padding-top: 4rem; */
+       padding-right: 6rem;
+    color: var(--headings-font-color);
+    text-decoration: underline;
+}
+#quiz_intro p{
+    padding-top: 1rem;
+    line-height: 4rem;
+    font-size: larger;
+    font-weight: 500;
+    letter-spacing:.09dvw;
+}
+#quiz_intro .buttons{
+    padding-left:4rem;
+    margin-top:0rem !important;
+    /* border: 1px solid blue; */
+}
+#quiz_intro .buttons button{
+    margin-top:-2.5rem !important;
+}
+
+
+/* --------------------------Quiz section---------------------- */
+
+
+#quiz{
+    /* border: 1px solid green; */
+    margin-top: 5.5rem;
+    display: flex;
+    padding-top: 5.5rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:97.5vh;
+}
+
+.question_head_box div{
+    /* border:1px solid goldenrod; */
+    margin-right:5.5rem;
+    color: var(--headings-font-color);
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+.question_box h2{
+    padding-bottom: 1rem;
+}
+.question_box p{
+    font-size: larger;
+    padding-bottom: 2rem;
+}
+.question_box .buttons button{
+    margin-top: 0.5rem !important;
+    margin-left: 5rem;
+}
+/* Customize the label (the container) */
+.container {
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    border-radius:12px;
+    padding: 12px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    margin-top: 10px;
+    margin-left: 8px;
+    align-self: start;
+    cursor: pointer;
+    height: 1.3rem;
+    width: 1.5rem;
+  }
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~  {
+    display: block;
+  }
+  
+
+
+  /* ------------------------------------what we do section--------------------------------- */
+
+#what_we_do_section{
+    /* border: 1px solid green; */
+    padding-top: 5.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:87.5vh;
+}
+#what_we_do_section .what_we_do{
+    color: var(--headings-font-color);
+    padding-top: 3rem;
+    text-decoration: underline;
+}
+#what_we_do_section p{
+    padding-top: 2rem;
+    font-size: large;
+}
+.what_we_do_sub{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* border: 1px solid red; */
+}
+.grid_item{
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+}
+.grid_item h1{
+    color: var(--headings-font-color);
+}
+
+
+/* ---------------------------------------Mental Health Resources----------------------------- */
+
+
+
+#mental_health_resources{
+    padding-top: 5.5rem;
+    width: 100%;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:87.5vh;
+}
+.mh_resources_heading{
+    /* border: 1px solid firebrick; */
+    display: flex;
+    gap: 1rem;
+    justify-content:space-evenly;
+
+}
+.mh_resources_heading h1{
+color: var(--headings-font-color);
+padding-top: 2.2rem;
+text-decoration: underline;
+}
+
+#mental_health_resources p{
+    font-size: large;
+}
+.mh_resources{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+}
+.mh_resources .grid_item{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.mh_resources .grid_item h1{
+    padding-top:1rem !important;
+}
+
+#mental_health_resources .grid_item h1{
+    padding-top:1rem !important; 
+}
+
+
+/*------------------------------------------------------------ Contact Us in footer ------------------------------*/
+
+
+#contact_us{
+    border: 1px solid goldenrod;
+    margin-top: 5.5rem;
+    /* padding-top: 5.5rem; */
+    width: 100%;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height:87.5vh;
+    font-size: large;
+}
+
+.contact_us_boxes{
+    padding-top: 7rem;
+    display: flex;
+    width: 60%;
+    gap: 5rem;
+}
+.contact_us_boxes div{
+    background-color:#f5d03f;
+
+}
+
+.footer{
+    color: white;
+    background-color: rgb(85, 120, 146);
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+   margin-top: 3rem;
+   padding-top: 2rem;
+   
+}
+.footer a{
+    color: white;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    padding-right: 3rem;
+}

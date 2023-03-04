@@ -1,0 +1,12 @@
+headings font color
+#da0067
+background color
+#e1f5ff
+icon colors
+#050038
+button color
+#ec2761
+nav color
+#ffffff
+contact us bg
+#f5d03f
