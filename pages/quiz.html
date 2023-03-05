@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Better Days</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Better Days</h1>
+        <ul>
+          <li><a href="./index.htm"">Home</a></li>
+          <li><a href="./pages/what_we_do.html"">What We Do</a></li>
+          <li><a href="./pages/mental_health_resources.html"">MH resources</a></li>
+          <li><a href="./pages/contact_us.html"">Help</a></li>
+          <li><a href="./pages/contact_us.html"">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="quiz">
+        <div id="nav_space"></div>
+        <div class="question_head_box">
+          <div>
+            <img
+              src="./assets/download.png"
+              alt=""
+              height="150rem"
+              width="150rem"
+            />
+            <h1>Mental Health Self-Assessment Quiz</h1>
+          </div>
+        </div>
+        <div class="question_box">
+          <h2>Question 1</h2>
+          <p>Which age category do you belong to?</p>
+          <div>
+            <label onclick="questionSelector()" class="container">
+              <input type="radio" name="radio" />
+              16 - 24 Years Old
+            </label>
+
+            <label onclick="questionSelector()" class="container">
+              <input type="radio" name="radio" />
+              25 - 35 Years Old
+            </label>
+            <label onclick="questionSelector()" class="container">
+              <input type="radio" name="radio" />
+              36 - 49 Years Old
+            </label>
+            <label onclick="questionSelector()" class="container">
+              <input type="radio" name="radio" />
+              50+ Years Old
+            </label>
+          </div>
+          <div class="buttons">
+            <button onclick="scroll_to_quiz()">Next Question</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
