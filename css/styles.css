@@ -18,6 +18,7 @@ body{
     color:black;
     background-color:var(--background-color);
     width: 100%;
+    overflow: hidden; /* Hide scrollbars */
     scroll-behavior:smooth;
     font-family: 'Poppins', sans-serif;
 }
@@ -29,18 +30,14 @@ body{
 
 
 header nav{
-    position: fixed;
-     top: 0;
      width: 98%;
     margin-left:1rem;
     margin-right: 1rem; 
     background-color:var(--nav-bg);
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    padding: 1.5rem;
-    z-index: 9999;
+    border-radius: 12px;
+    margin-top:.5rem;
+    padding: 1.1rem;
     display: flex;
-    /* filter: brightness(97%); */
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
 }
@@ -49,10 +46,11 @@ nav h1{
     color: #da0067;
     /* border: 1px solid black; */
     margin-left: 5rem;
-    padding-top:.02rem;
+    padding-top:-0.2rem;
 }
 nav ul{
     display: flex;
+    padding-top: 0.5rem;
     /* border: 1px solid red; */
     justify-content: space-evenly;
     gap: 2.5rem;
@@ -99,27 +97,20 @@ nav ul li a:hover, a:active{
 /* ---------------------------------------------------Hero Section---------------------------------------------- */
 
 #hero_section{
-    /*  */
-    /* border: 1px solid red; */
+
     height: 87.5vh;
 }
 #hero_section> div{
-    /* border: 1px solid red;  */
     display: flex;
     align-items: center;
     flex-direction: column;
-
     animation: fadeInAnimations_for_text ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-#nav_space{
-    height: 5rem;
-    /* border: 1px solid gold; */
-}
 .hero_text{
     margin-top: 3rem;
-    font-size: larger;
+    font-size: medium;
     font-weight: 700;
 }
 .hero_text p{
@@ -227,18 +218,18 @@ nav ul li a:hover, a:active{
 
 #get_started_section{
     /* border: 1px solid black; */
-    /* background-color:#cbfcff; */
-    margin-top: 5.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    /* border: 1px solid black; */
-    height:87.5vh;
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 
 }
 .get_started_section_text{
-    padding-top: 2rem;
+    padding-top: .5rem;
 }
 .get_started_section_text >div{
     /* border: 1px solid red; */
@@ -246,9 +237,9 @@ nav ul li a:hover, a:active{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .2rem;
+    gap: .1rem;
     padding-bottom:.3rem;
-    font-size: larger;
+    font-size: large;
     font-weight: 500;
     border-radius:12px;
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,.2); */
@@ -256,21 +247,23 @@ nav ul li a:hover, a:active{
 }
 .get_started_section_text div span{
     color: rgb(91, 90, 90);
-    font-size: larger;
-    font-weight: 500;  
+    font-size: large;
+    font-weight: 600;  
 }
 .get_started_section_text div span:nth-child(1){
     color: var(--headings-font-color);
-    padding-top: .5rem;
-    font-size: xx-large;
-    font-weight:500;  
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 40px;
+    text-decoration:underline;
+    font-weight:600;  
 }
 
 .get_started_section_text p{
 
-    padding-top:1.5rem;
+    padding-top:2.5rem;
     letter-spacing:.09dvw;
-    font-size: large;
+    font-size: medium;
     color: rgb(26, 24, 24);
 
 }
@@ -283,15 +276,18 @@ nav ul li a:hover, a:active{
 
 #quiz_intro{
     /* border: 1px solid brown; */
-    margin-top: 5.5rem;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height:87.5vh;
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #quiz_intro div{
-    padding-top: 3rem;
+    /* border: 1px solid green; */
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -301,25 +297,17 @@ nav ul li a:hover, a:active{
     background-color: var(--background-color);
 }
 #quiz_intro h1{
-       /* padding-top: 4rem; */
-       padding-right: 6rem;
+       padding-right: 3.5rem;
     color: var(--headings-font-color);
     text-decoration: underline;
 }
-#quiz_intro p{
-    padding-top: 1rem;
-    line-height: 4rem;
-    font-size: larger;
-    font-weight: 500;
+.quiz_into_text{
+    width:50%;
+    word-wrap: break-word;
+    padding-top: 2rem;
+    line-height: 2.5rem;
+    font-size: medium;
     letter-spacing:.09dvw;
-}
-#quiz_intro .buttons{
-    padding-left:4rem;
-    margin-top:0rem !important;
-    /* border: 1px solid blue; */
-}
-#quiz_intro .buttons button{
-    margin-top:-2.5rem !important;
 }
 
 
@@ -328,18 +316,21 @@ nav ul li a:hover, a:active{
 
 #quiz{
     /* border: 1px solid green; */
-    margin-top: 5.5rem;
     display: flex;
-    padding-top: 5.5rem;
+    padding-top: 1.5rem;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height:97.5vh;
+    /* height:87.5vh; */
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .question_head_box div{
     /* border:1px solid goldenrod; */
-    margin-right:5.5rem;
+    margin-right:3.5rem;
     color: var(--headings-font-color);
     text-decoration: underline;
     display: flex;
@@ -347,14 +338,16 @@ nav ul li a:hover, a:active{
 }
 .question_box h2{
     padding-bottom: 1rem;
+    margin-right:6%;
+    color: rgb(84, 84, 84);
 }
 .question_box p{
-    font-size: larger;
+    font-size: medium;
     padding-bottom: 2rem;
 }
 .question_box .buttons button{
-    margin-top: 0.5rem !important;
-    margin-left: 5rem;
+    margin-top: 0.9rem !important;
+    margin-left: 3.8rem;
 }
 /* Customize the label (the container) */
 .container {
@@ -366,7 +359,7 @@ nav ul li a:hover, a:active{
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: medium;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -377,14 +370,14 @@ nav ul li a:hover, a:active{
   }
   
   /* Hide the browser's default radio button */
-  .container input {
+  /* .container input {
     margin-top: 10px;
     margin-left: 8px;
     align-self: start;
     cursor: pointer;
     height: 1.3rem;
     width: 1.5rem;
-  }
+  } */
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
     background-color: #ccc;
@@ -401,37 +394,50 @@ nav ul li a:hover, a:active{
 
 #what_we_do_section{
     /* border: 1px solid green; */
-    padding-top: 5.5rem;
+    padding-top: 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height:87.5vh;
+    /* height:87.5vh; */
+
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #what_we_do_section .what_we_do{
     color: var(--headings-font-color);
-    padding-top: 3rem;
+    text-align: center;
+    padding-right:1%;
+    word-wrap:break-word;
     text-decoration: underline;
 }
 #what_we_do_section p{
     padding-top: 2rem;
-    font-size: large;
+    font-size: medium;
+    word-wrap:break-word;
 }
 .what_we_do_sub{
+    padding-top: 1rem;
     display: grid;
+    padding-left:4.5%;
+    justify-content: center;
     grid-template-columns: auto auto;
+    word-wrap:break-word;
     /* border: 1px solid red; */
 }
 .grid_item{
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    padding: 20px;
-    /* font-size: 30px; */
+    /* border: 1px solid red; */
+    width: 85%;
+    padding: 15px;
+    word-wrap:break-word;
     text-align: center;
 }
 .grid_item h1{
     color: var(--headings-font-color);
+    word-wrap:break-word;
 }
 
 
@@ -440,30 +446,37 @@ nav ul li a:hover, a:active{
 
 
 #mental_health_resources{
-    padding-top: 5.5rem;
     width: 100%;
     display: flex;
     gap:1rem;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height:87.5vh;
+    /* height:87.5vh; */
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .mh_resources_heading{
     /* border: 1px solid firebrick; */
     display: flex;
-    gap: 1rem;
+    padding-right:4.5%;
+    gap: .5rem;
     justify-content:space-evenly;
 
 }
 .mh_resources_heading h1{
 color: var(--headings-font-color);
-padding-top: 2.2rem;
+padding-top:10%;
 text-decoration: underline;
+}
+.mh_resources_heading img{
+    margin-top:4%;
 }
 
 #mental_health_resources p{
-    font-size: large;
+    font-size: medium;
 }
 .mh_resources{
     display: grid;
@@ -473,39 +486,57 @@ text-decoration: underline;
 .mh_resources .grid_item{
     /* border: 1px solid red; */
     display: flex;
-    gap: 1rem;
+    width:auto;
+    padding-block:2rem;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;   
 }
 .mh_resources .grid_item h1{
+    padding-bottom:3.5%;
     padding-top:1rem !important;
 }
 
 #mental_health_resources .grid_item h1{
-    padding-top:1rem !important; 
+    padding-top:.5rem !important; 
+}
+.grid_item_end{
+    display: flex;
+    width:auto;
+    /* padding-block:2rem; */
+    flex-direction: column;
+    align-items: center;  
 }
 
 
-/*------------------------------------------------------------ Contact Us in footer ------------------------------*/
+/*------------------------------------------------------------ Contact US ------------------------------*/
 
 
 #contact_us{
     /* border: 1px solid goldenrod; */
-    margin-top: 5.5rem;
-    /* padding-top: 5.5rem; */
     width: 100%;
+    padding-top:.5rem;
     display: flex;
     gap:1rem;
     flex-direction: column;
     text-align: center;
     align-items: center;
     height:87.5vh;
-    font-size: large;
-}
+    font-size: medium;
 
+
+    animation: fadeInAnimations_for_text ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#contact_us .contact_us_heading{
+ display: flex;
+ padding-right: 6%;
+ gap: 1rem;
+ color: var(--headings-font-color);
+ align-items: center;
+}
 .contact_us_boxes{
-    padding-top: 7rem;
+    padding-top: 5rem;
     display: flex;
     width: 60%;
     gap: 5rem;
@@ -513,22 +544,4 @@ text-decoration: underline;
 .contact_us_boxes div{
     background-color:#f5d03f;
 
-}
-
-.footer{
-    color: white;
-    background-color: rgb(85, 120, 146);
-    height: 5rem;
-    width: 100%;
-    text-align: center;
-   margin-top: 3rem;
-   padding-top: 2rem;
-   
-}
-.footer a{
-    color: white;
-    position: absolute;
-    right: 0;
-    text-decoration: none;
-    padding-right: 3rem;
 }
