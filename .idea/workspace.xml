@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc705870-3d8d-494d-8cdf-38f6735d4985" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/2989993.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/5847fafdcef1014c0b5e48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/download-mental-health.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/what_we_do.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/colors.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact_us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/getstarted.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mental_health_resources.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/quiz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/quiz_intro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/what_we_do.html" beforeDir="false" />
-    </list>
+    <list default="true" id="cc705870-3d8d-494d-8cdf-38f6735d4985" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,13 +29,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/shoai/OneDrive/Desktop/Web-project"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -303,7 +303,7 @@ nav ul li a:hover, a:active{
 /* -------------------------------Quiz Intro Section---------------------- */
 
 #quiz_intro{
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -330,7 +330,7 @@ nav ul li a:hover, a:active{
     text-decoration: underline;
 }
 .quiz_into_text{
-    width:50%;
+    width:40%;
     word-wrap: break-word;
     padding-top: 1rem;
     line-height: 2.5rem;
