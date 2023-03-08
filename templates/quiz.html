@@ -16,8 +16,8 @@
           </div>
         </div>
         <div class="question_box">
-           <h2>Question {{q_number}}</h2>
-          <p>{{question}}</p>
+          <h2>Question 1</h2>
+          <p id="quiz_1_p">Which age category do you belong to?</p>
           <div>
             <form action="">
             <label class="container">
@@ -39,7 +39,7 @@
             </label>
           </form>
           </div>
-          <div class="buttons">
+          <div class="buttons" id="quiz_1_btn">
             <button onclick="location.href='{{url_for('quiz_main', q_number=0)}}'">Next Question</button>
           </div>
         </div>
