@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../css/styles.css" />
-    <title>Better Days</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>Better Days</h1>
-        <ul>
-          <li><a href="./../index.html">Home</a></li>
-          <li><a href="what_we_do.html">What We Do</a></li>
-          <li><a href="quiz_intro.html">MH Assessment</a></li>
-          <li><a href="mental_health_resources.html">MH resources</a></li>
-          <li><a href="contact_us.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+{% extends "base.html" %}
+{% block title %}Better Days{% endblock %}
+
+
+{% block content %}
       <section id="get_started_section">
         <div class="get_started_section_text">
           <div>
@@ -33,7 +15,7 @@
             <span> You are human. </span>
             <span> We are here to help you </span>
           </div>
-          
+
         </div>
         <div class="get_started_section_text_lower">
           <p>
@@ -46,10 +28,8 @@
           </p>
         </div>
         <div class="buttons">
-        <button onclick="location.href='quiz_intro.html'">Self-Assessment Quiz</button>
+        <button onclick="location.href='{{url_for('quiz_intro')}}'">Self-Assessment Quiz</button>
         </div>
       </section>
-    </main>
-    <script src="./js/script.js"></script>
-  </body>
-</html>
+
+  {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Better Days - Quiz{% endblock %}
+
+
+{% block content %}
+      <section id="quiz">
+        <div class="question_head_box">
+          <div>
+            <img
+              src="{{url_for('static', filename='assets/download.png')}}"
+              alt=""
+              height="100rem"
+              width="100rem"
+            />
+            <h2>Mental Health Self-Assessment Quiz</h2>
+          </div>
+        </div>
+        <div class="question_box">
+           <h2>Question {{q_number}}</h2>
+          <p>{{question}}</p>
+          <div>
+            <form action="">
+            <label class="container">
+              <input type="radio" name="radio" />
+              16 - 24 Years Old
+            </label>
+
+            <label class="container">
+              <input type="radio" name="radio" />
+              25 - 35 Years Old
+            </label>
+            <label class="container">
+              <input type="radio" name="radio" />
+              36 - 49 Years Old
+            </label>
+            <label  class="container">
+              <input type="radio" name="radio" />
+              50+ Years Old
+            </label>
+          </form>
+          </div>
+          <div class="buttons">
+            <button onclick="location.href='{{url_for('quiz_main', q_number=0)}}'">Next Question</button>
+          </div>
+        </div>
+      </section>
+
+  {% endblock %}

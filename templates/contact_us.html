@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../css/styles.css" />
-    <title>Better Days</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1>Better Days</h1>
-        <ul>
-          <li><a href="./../index.html">Home</a></li>
-          <li><a href="what_we_do.html">What We Do</a></li>
-          <li><a href="quiz_intro.html">MH Assessment</a></li>
-          <li><a href="mental_health_resources.html">MH resources</a></li>
-          <li><a href="contact_us.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="contact_us">
+
+{% extends "base.html" %}
+{% block title %}Better Days - Contact US{% endblock %}
+
+
+{% block content %}
+
+ <section id="contact_us">
         <div class="contact_us_heading">
-          <img
-            src="./../assets/2989993.png"
+           <img
+            src="{{url_for('static', filename='assets/2989993.png')}}"
             alt=""
-            height="80rem"
-            width="80rem"
+            height="100rem"
+            width="100rem"
           />
           <h2>Contact Us</h2>
         </div>
@@ -37,7 +21,7 @@
         </p>
         <div class="contact_us_heading">
           <img
-            src="./../assets/5847fafdcef1014c0b5e48.png"
+            src="{{url_for('static', filename='assets/5847fafdcef1014c0b5e48.png')}}"
             height="30px"
             width="30px"
             alt=""
@@ -54,7 +38,5 @@
             Lifeline - 0808 808 8000 National Suicide Prevention Helpline -  0800 689 5652</div>
         </div>
       </section>
-    </main>
-    <script src="./js/script.js"></script>
-  </body>
-</html>
+
+{% endblock %}

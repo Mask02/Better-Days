@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Better Days - Result{% endblock %}
+
+
+{% block content %}
+
+
+<section id="result">
+      <div class="mh_resources_heading">
+        <img src="./../assets/download-mental-health.png" alt="" height="90rem" width="90rem" />
+        <h2>Mental Health Self-Assessment Quiz</h2>
+      </div>
+      <h3>Results</h3>
+      <div class="result_score">
+        <p>Here is your Mental Health illness score.</p>
+        <div class="score_box">
+          <span> 10 </span>
+          <span> /10 </span>
+        </div>
+      </div>
+      <div class="result_text">
+        From the responses you have given to the questions it is extremely
+        likely you are suffering from a mental health illness. We have
+        provided a list of resources below which will help you on your
+        journey, specifically picked for you based on your responses.
+      </div>
+      <div class="result_contact_box">
+        <div>
+          <h4>NHS- Help with depression diagnosis</h4>
+          <p>Website: <a href="https://nhs.uk" target="_blank"> nhs.uk</a></p>
+          <p>Phone <a href="tel:111">111</a></p>
+        </div>
+        <div>
+          <h4>Shout - Sexuality Support Line</h4>
+          <p>
+            Website -<a href="https://giveusashout.org" target="_blank">giveusashout.org</a>
+          </p>
+          <p>Phone - <a href="tel:85258">85258</a></p>
+        </div>
+      </div>
+      <div>
+        <h4>Frank - Substance Abuse Helpline</h4>
+        <p>
+          Website -<a href="https://talktofrank.com" target="_blank">talktofrank.com</a>
+        </p>
+        <p>Phone - <a href="tel:08081606606">08081606606</a></p>
+      </div>
+    </section>
+
+{% endblock %}

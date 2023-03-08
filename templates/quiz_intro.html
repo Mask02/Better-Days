@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Better Days - Quiz{% endblock %}
+
+
+{% block content %}
+      <section id="quiz_intro">
+            <div class="question_head_box">
+              <div>
+                <img src="./../{{url_for('static', filename='assets/download.png')}}" alt="" height="100rem" width="100rem" />
+                <h1>Mental Health Self-Assessment Quiz</h1>
+              </div>
+            </div>
+            <div class="quiz_into_text">
+              <p>Welcome to the Better Days Mental Health Self- Assessment. When it comes to your mental health it can
+              be difficult to fully understand the emotions you are feeling. Stereotypes often lead men to disregard
+              how they're feeling to fit societal norms, however this usually leads to these feeling getting worse.
+              Take some time to take this assessment and think how you have been feeling the last 6 months.</p>
+            </div>
+            <div class="buttons">
+              <button onclick="location.href='{{url_for('quiz')}}'">Start Your Assessment</button>
+            </div>
+      </section>
+
+  {% endblock %}

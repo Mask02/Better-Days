@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% block title %}Better Days - Home{% endblock %}
+
+
+{% block content %}
+      <section id="hero_section">
+        <div>
+          <div class="side-logo">
+            <div id="eclips">
+              <h1>Better</h1>
+              <h1>Days</h1>
+            </div>
+          </div>
+          <div class="hero_text">
+            <p>
+              &#8220;Empowering men to thrive and live their best lives.<br />
+              You are not alone, we are here to support you.&#8221;
+            </p>
+          </div>
+          <div class="buttons">
+            <button onclick="location.href='{{url_for('getstarted')}}'">Get Started</button>
+            <button onclick="location.href='{{url_for('what_we_do')}}'">Learn More</button>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}
