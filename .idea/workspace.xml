@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc705870-3d8d-494d-8cdf-38f6735d4985" name="Changes" comment="" />
+    <list default="true" id="cc705870-3d8d-494d-8cdf-38f6735d4985" name="Changes" comment="quiz intro updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +46,18 @@
       <option name="presentableId" value="Default" />
       <updated>1678124222965</updated>
     </task>
+    <task id="LOCAL-00001" summary="quiz intro updated">
+      <created>1678298398324</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678298398324</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="quiz intro updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="quiz intro updated" />
   </component>
 </project>
