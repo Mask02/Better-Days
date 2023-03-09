@@ -15,23 +15,24 @@ block content %}
   <div class="question_box">
     <h2>Question {{q_number}}</h2>
     <p>{{question}}</p>
-    <form action="">
+    <form action="{{ url_for('quiz_main') }}" method="POST">
       <label class="container">
-        <input type="radio" name="radio" />
+        <input type="radio" name="radio" value="yes" required>
         Yes
       </label>
 
       <label class="container">
-        <input type="radio" name="radio" />
+        <input type="radio" name="radio" value="no" required>
         No
       </label>
-    </form>
-    <div class="buttons">
-      <button
-        onclick="location.href='{{url_for('quiz_main', q_number=q_number)}}'"
-      >
+
+      <div class="buttons">
+      <button type="submit">
         Next Question
       </button>
+
+    </form>
+
     </div>
   </div>
 </section>

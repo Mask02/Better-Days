@@ -19,29 +19,32 @@
           <h2>Question 1</h2>
           <p id="quiz_1_p">Which age category do you belong to?</p>
           <div>
-            <form action="">
+          <form action="{{ url_for('quiz_main') }}" method="POST">
             <label class="container">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="1" required>
               16 - 24 Years Old
             </label>
 
             <label class="container">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="0" required>
               25 - 35 Years Old
             </label>
             <label class="container">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="0" required>
               36 - 49 Years Old
             </label>
             <label  class="container">
-              <input type="radio" name="radio" />
+              <input type="radio" name="radio" value="0" required>
               50+ Years Old
             </label>
+
+            <div class="buttons" id="quiz_1_btn">
+            <button type="submit">Next Question</button>
+          </div>
+
           </form>
           </div>
-          <div class="buttons" id="quiz_1_btn">
-            <button onclick="location.href='{{url_for('quiz_main', q_number=0)}}'">Next Question</button>
-          </div>
+
         </div>
       </section>
 

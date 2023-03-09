@@ -7,15 +7,15 @@
 
 <section id="result">
       <div class="mh_resources_heading">
-        <img src="./../assets/download-mental-health.png" alt="" height="90rem" width="90rem" />
+        <img src="{{url_for('static', filename='assets/download-mental-health.png')}}" alt="" height="90rem" width="90rem" />
         <h2>Mental Health Self-Assessment Quiz</h2>
       </div>
       <h3>Results</h3>
       <div class="result_score">
         <p>Here is your Mental Health illness score.</p>
         <div class="score_box">
-          <span> 10 </span>
-          <span> /10 </span>
+          <span> {{score}} </span>
+          <span> /{{total_score}} </span>
         </div>
       </div>
       <div class="result_text">

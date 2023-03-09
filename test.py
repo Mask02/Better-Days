@@ -56,5 +56,17 @@ def question(id):
     return render_template('quiz_question.html', question=question)
 
 
+@app.route('/answer', methods=['POST'])
+def answer():
+    global current_question
+    answer = request.form['answer']
+    # Do something with answer (e.g. store it in a database)
+    # Move on to next question or show results if there are no more questions
+    current_question += 1
+    if current_question == len(questions):
+        return redirect(url_for('results'))
+    else:
+        return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
