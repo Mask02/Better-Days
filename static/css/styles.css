@@ -397,10 +397,10 @@ nav ul li a.active {
 }
 #quiz_1_btn{
     margin-top:-2rem !important;
-    margin-left: 3.5rem;
+    margin-left: 4.5rem;
 }
 #quiz_main_button{
-    margin-left: 3.5rem;
+    margin-left: 4.5rem;
 }
 /* Customize the label (the container) */
 .container {
@@ -435,7 +435,7 @@ nav ul li a.active {
   @keyframes fadeInAnimations_for_quiz{
     0% {
         opacity: 0;
-        transform: translate3d(0, -150px , 0);
+        transform: translate3d(0, 25px, 0);
         cursor: pointer;
         transition: 1s all ease-in-out;
     }
