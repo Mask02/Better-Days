@@ -596,7 +596,7 @@ text-decoration: underline;
   /* border: 1px solid red; */
   color: var(--headings-font-color);
   margin-right: 30%;
-  margin-top: 2%;
+  /* margin-top: 1%; */
 }
 .result_score{
     display:flex;
@@ -618,7 +618,7 @@ text-decoration: underline;
    align-items: center;
 }
 #result div h4{
-    padding-top: 1rem;
+    padding-top: .5rem;
 }
 
 /*-------------------------------------------- Contact US ------------------------------*/
