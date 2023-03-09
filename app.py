@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+
+app.secret_key = 'your_secret_key'
 
 
 @app.route("/login")
@@ -71,7 +73,8 @@ is_young = 0
 is_question2 = ''
 total_score = 0
 
-@app.route('/quiz_main', methods=['POST'])
+
+@app.route('/quiz_main', methods=['POST', 'GET'])
 def quiz_main():
     global current_question
     global answers
@@ -79,41 +82,51 @@ def quiz_main():
     global is_question2
     global total_score
 
-    answer = request.form['radio']
+    if request.method == 'POST':
+        answer = request.form['radio']
 
-    if current_question == 1:
-        is_young = int(answer)
+        if current_question == 1:
+            is_young = int(answer)
 
-    if current_question == 2:
-        is_question2 = answer
+        if current_question == 2:
+            is_question2 = answer
 
-    print(answer)
+        print(answer)
 
-    if current_question >= 4:
-        answers.append(answer)
-        total_score += 1
-    print(current_question, answers)
+        if current_question >= 4:
+            answers.append(answer)
+            total_score += 1
+        print(current_question, answers)
 
-    if current_question == 3 and is_question2=='no':
-        print("q 2=", is_question2, "skip")
-        if not is_young:
-            current_question += 3
-        else:
+        if current_question == 3 and is_question2=='no':
+            print("q 2=", is_question2, "skip")
+            if not is_young:
+                current_question += 3
+            else:
+                current_question += 2
+        elif current_question == 4 and not is_young:
             current_question += 2
-    elif current_question == 4 and not is_young:
-        current_question += 2
-    else:
-        current_question += 1
+        else:
+            current_question += 1
 
-    if current_question < 4:
-        current_q = current_question
-    else:
-        current_q = 4 + total_score
+        if current_question < 4:
+            current_q = current_question
+        else:
+            current_q = 4 + total_score
 
+        if current_question == len(questions):
+            return redirect(url_for('result'))
+        else:
+            session['question'] = questions[current_question]
+            session['q_number'] = current_q
+            return redirect(f'/quiz_main')
 
-    if current_question == len(questions):
-        return redirect(url_for('result'))
     else:
+        if current_question < 4:
+            current_q = current_question
+        else:
+            current_q = 4 + total_score
+
         return render_template('quiz_main.html', question=questions[current_question], q_number=current_q)
 
 
