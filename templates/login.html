@@ -10,7 +10,7 @@
 <body>
     <!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
 <div class="container" id="container">
-	<div class="form-container sign-up-container">
+	<div class="form-container sign-up-container {{class_f | default(' ')}}">
 		<form action="/register" method="POST">
 			<h1>Create Account</h1>
 			<!-- <div class="social-container">
@@ -22,6 +22,7 @@
 			<input type="text" name="name" placeholder="Name" required />
 			<input type="email" name="email" placeholder="Email" required />
 			<input type="password" name="password" placeholder="Password" required/>
+			<div id="email_register" style="display:{{display | default('none')}};"><span>Email Already Registered</span></div>
 			<button>Sign Up</button>
 		</form>
 	</div>
@@ -31,9 +32,11 @@
 
 			<input type="email" name="email" placeholder="Email" />
 			<input type="password" name="password" placeholder="Password" />
+			<div id="wrong_password" style="display:{{display | default('none')}};"><span>Incorrect Email or Password</span></div>
 <!--			<a href="#">Forgot your password?</a>-->
 			<button>Sign In</button>
 		</form>
+		
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">

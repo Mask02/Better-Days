@@ -117,7 +117,16 @@ input {
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
-
+#wrong_password{
+	margin-bottom:.5rem;
+	color:red;
+	font-weight: 700;
+}
+#email_register{
+	color:red;
+	font-weight: 700;
+	margin-bottom:.5rem;
+}
 .sign-in-container {
 	left: 0;
 	width: 50%;

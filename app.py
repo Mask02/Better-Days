@@ -73,7 +73,7 @@ def register():
         user = c.fetchone()
         if user:
             conn.close()
-            return "Email address already registered!"
+            return render_template('login.html', class_f= 'right-panel-active', display = 'block')
 
         # Insert user into database
         c.execute("INSERT INTO users (name, email, password) VALUES (?, ?, ?)",
@@ -105,8 +105,7 @@ def login():
         c.execute("SELECT * FROM users WHERE email=? AND password=?", (email, password))
         user = c.fetchone()
         if not user:
-            conn.close()
-            return "Invalid email or password!"
+           return render_template('login.html', display='block')
 
         # Store user data in session
         session["user_id"] = user[0]
