@@ -118,7 +118,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route('/logout', methods=['POST', 'GET'])
+@app.route('/logout', methods=['POST'])
 def logout():
     session.clear()
     return redirect(url_for('login'))
@@ -136,7 +136,7 @@ def what_we_do():
     return render_template('what_we_do.html')
 
 
-questions = ["", "", 'Are you a member of the LGBTQ+ community?', 'In the past 6 months, have you used alcohol or drugs to cope with stress or bad moods?', 'Have you or someone close to you struggled to deal with your sexuality?', 'Have you struggled with the expectations and stresses ofentering adulthood?', 'In the past 6 months, have you had trouble sleeping or been sleeping too much?', 'In the past 6 months, have you had less energy/motivation?', 'In the past 6 months, have you had a notable change in appetite? Eating more/less?', 'In the past 6 months, have you felt like a failure or that you have let down others around you?',
+questions = ["", "", 'Are you a member of the LGBTQ+ community?', 'In the past 6 months, have you used alcohol or drugs to cope with stress or bad moods?', 'Have you or someone close to you struggled to deal with your sexuality?', 'Have you struggled with the expectations and stresses of entering adulthood?', 'In the past 6 months, have you had trouble sleeping or been sleeping too much?', 'In the past 6 months, have you had less energy/motivation?', 'In the past 6 months, have you had a notable change in appetite? Eating more/less?', 'In the past 6 months, have you felt like a failure or that you have let down others around you?',
              'In the past 6 months, have you often felt down, depressed or hopeless?', 'In the past 6 months, have you suffered an anxiety attack?', 'In the past 6 months, have you felt more irritable or annoyed?', "In the past 6 months, have you felt like you've had no one to turn to?"]
 
 
@@ -145,14 +145,18 @@ def quiz():
     global current_question
     global answers
     global is_young
-    global is_question2
+    global q2_ans
     global total_score
+    global q3_ans
+    global q4_ans
 
     current_question = 1
     answers = list()
     is_young = 0
-    is_question2 = ''
+    q2_ans = ''
     total_score = 0
+    q4_ans = None
+    q3_ans = None
     return render_template('quiz.html')
 
 
@@ -160,15 +164,48 @@ def quiz():
 def result():
     global answers
     global total_score
+    global result_txt
+
+    nhs_support = None
+    sex_support = None
+    abuse_support = None
+
+    responses_set = ["From the responses you've given to the questions, there is no indication of mental illness. Please note that these questions do not cover all issues and if you have any more doubts please contact a health professional.",
+                     "From the responses you've given to the questions, it is possible that you may be suffering with a mental health illness. For more information please have a look at the following resources or contact a health professional.",
+                     "From the responses you have given to the questions it is extremely likely you are suffering from a mental health illness. We have provided a list of resources below which will help you on your journey, specifically picked for you based on your responses."]
+
     score = answers.count('yes')
-    return render_template('result.html', score=score, total_score=total_score)
+
+    if score <= 3:
+        result_txt = responses_set[0] 
+
+    elif score >= 6:
+        result_txt = responses_set[2]
+        nhs_support = 'block'
+        if q4_ans == 'yes':
+            sex_support = 'block'
+        if q3_ans == 'yes':
+            abuse_support = 'block' 
+
+    else:   # for 4 or 5 score
+        result_txt = responses_set[1] 
+
+        nhs_support = 'block'
+        if q4_ans == 'yes':
+            sex_support = 'block'
+        if q3_ans == 'yes':
+            abuse_support = 'block' 
+
+    return render_template('result.html', score=score, total_score=total_score, result_text=result_txt, nhs_support=nhs_support, sex_support=sex_support, abuse_support=abuse_support)
 
 
 current_question = 1
 answers = list()
 is_young = 0
-is_question2 = ''
+q2_ans = ''
 total_score = 0
+q4_ans = None
+q3_ans = None
 
 
 @app.route('/quiz_main', methods=['POST', 'GET'])
@@ -176,8 +213,11 @@ def quiz_main():
     global current_question
     global answers
     global is_young
-    global is_question2
+    global q2_ans
     global total_score
+    global q3_ans
+    global q4_ans
+  
 
     if request.method == 'POST':
         answer = request.form['radio']
@@ -186,13 +226,22 @@ def quiz_main():
             is_young = int(answer)
 
         if current_question == 2:
-            is_question2 = answer
+            q2_ans = answer
 
+        # store the ans
         if current_question >= 4:
             answers.append(answer)
             total_score += 1
 
-        if current_question == 3 and is_question2 == 'no':
+        if current_question == 3:
+            q3_ans = answer
+
+        if current_question == 4 and q2_ans == 'yes':
+            q4_ans = answer
+
+        print(answers, q3_ans, q4_ans)
+
+        if current_question == 3 and q2_ans == 'no':
             if not is_young:
                 current_question += 3
             else:
@@ -212,6 +261,7 @@ def quiz_main():
         else:
             session['question'] = questions[current_question]
             session['q_number'] = current_q
+
             return redirect(f'/quiz_main')
 
     else:
@@ -221,6 +271,7 @@ def quiz_main():
             current_q = 4 + total_score
 
         return render_template('quiz_main.html', question=questions[current_question], q_number=current_q)
+
 
 
 if __name__ == '__main__':
